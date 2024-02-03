@@ -7,8 +7,8 @@ public class Main_B_12891_DNA비밀번호_노우영 {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		int DNA_len = s.nextInt();
-		int part_len = s.nextInt();
+		int DNA_len = s.nextInt(); //입력된 DNA길이
+		int part_len = s.nextInt(); //부분문자열 길이
 		
 		
 		s.nextLine();
@@ -20,12 +20,14 @@ public class Main_B_12891_DNA비밀번호_노우영 {
 			DNA[i] = input.charAt(i);
 		}
 		int min_A, min_C, min_G, min_T;
-		min_A = s.nextInt();
+		min_A = s.nextInt(); //최소 필요한 개수
 		min_C = s.nextInt();
 		min_G = s.nextInt();
 		min_T = s.nextInt();
-		
+		s.nextLine();
 		int cnt = 0;
+
+//시간초과 O(N^2)
 //		int[] min = new int[4];
 ////		System.out.println(Arrays.toString(DNA));
 //		
@@ -46,18 +48,19 @@ public class Main_B_12891_DNA비밀번호_노우영 {
 //			min[3] = 0;
 //		}
 		
+//O(N)으로 다시 푼 코드
 		int[] temp_cnt = new int[4];
 		
-		//초기 부분문자열에 대해 개수 설정
+		//첫 부분문자열에 대해 ACGT개수 설정하고 저장
 		for(int i=0; i<part_len; i++) {
 			if(DNA[i] == 'A') temp_cnt[0]++;
 			else if(DNA[i] == 'C') temp_cnt[1]++;
 			else if(DNA[i] == 'G') temp_cnt[2]++;
 			else if(DNA[i] == 'T') temp_cnt[3]++;
 		}
-		//맨 앞글자는 제거, 뒤 글자는 추가
+		//맨 앞글자는 제거, 뒤 글자는 추가(current는 첫 부분문자열 다음 인덱스부터 시작)
 		for(int current=part_len; current<DNA_len; current++) {
-			int front=current-part_len;
+			int front=current-part_len; //front는 인덱스 0부터 시작
 			//맨 앞은 빼주고
 			if(DNA[front] == 'A') temp_cnt[0]--;
 			else if(DNA[front] == 'C') temp_cnt[1]--;
