@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 
 
-public class battlefield {
+public class Solution_1873_상호의배틀필드_노우영 {
 	static int Y,X;
 	static int y,x;
 	static int dir; //0상 1하 2좌 3우
