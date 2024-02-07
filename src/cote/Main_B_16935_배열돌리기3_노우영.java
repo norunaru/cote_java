@@ -62,7 +62,7 @@ public class Main_B_16935_배열돌리기3_노우영 {
 		print(arr);
 
 
-	}//main d
+	}//main 
 
 	private static void R1() { //상하 반전
 		int rows = arr.length;
