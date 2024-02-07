@@ -67,7 +67,7 @@ public class Main_B_16935_배열돌리기3_노우영 {
 	private static void R1() { //상하 반전
 		int rows = arr.length;
 		int cols = arr[0].length;
-		int[][] temp = new int[rows][cols];
+		temp = new int[rows][cols];
 		
 		for(int i=0; i<rows; i++) {
 			temp[rows-i-1] = arr[i];
@@ -79,7 +79,7 @@ public class Main_B_16935_배열돌리기3_노우영 {
 	private static void R2() { //좌우 반전
 		int rows = arr.length;
 		int cols = arr[0].length;
-		int[][] temp = new int[rows][cols];
+		temp = new int[rows][cols];
 		
 		for(int i=0; i<rows; i++) {
 			for(int j=0; j<cols; j++) {
@@ -93,7 +93,7 @@ public class Main_B_16935_배열돌리기3_노우영 {
 	private static void R3() { //오른쪽으로 90도 회전
 		int rows = arr.length;
 		int cols = arr[0].length;
-		int[][] temp = new int[cols][rows];
+		temp = new int[cols][rows];
 
 		for(int i=0; i<rows; i++) { 
 			for(int j=0; j<cols; j++) { 
@@ -108,7 +108,7 @@ public class Main_B_16935_배열돌리기3_노우영 {
 	private static void R4() { //왼쪽으로 90도 회전
 		int rows = arr.length;
 		int cols = arr[0].length;
-		int[][] temp = new int[cols][rows];
+		temp = new int[cols][rows];
 
 		for(int i=0; i<rows; i++) { //0-6
 			for(int j=0; j<cols; j++) { //0~8
@@ -122,7 +122,7 @@ public class Main_B_16935_배열돌리기3_노우영 {
 	private static void R5() {
 		int rows = arr.length;
 		int cols = arr[0].length;
-		int[][] temp = new int[rows][cols];
+		temp = new int[rows][cols];
 
 		//4분할배열 생성
 		for(int i=0; i<rows/2; i++) { //6  N
@@ -149,7 +149,7 @@ public class Main_B_16935_배열돌리기3_노우영 {
 	private static void R6() {
 		int rows = arr.length;
 		int cols = arr[0].length;
-		int[][] temp = new int[rows][cols];
+		temp = new int[rows][cols];
 		
 		//4분할배열 생성
 		for(int i=0; i<rows/2; i++) { //6  N
