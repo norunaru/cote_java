@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+//메모리 : 76936kb
+//시간 : 596ms
+
 public class Main_B_16935_배열돌리기3_노우영 {
 	static int[][] arr;
 	static int[][] temp;
@@ -20,11 +23,11 @@ public class Main_B_16935_배열돌리기3_노우영 {
 
 		arr = new int[N][M];
 
-		D1 = new int[N/2][M/2];
-		D2 = new int[N/2][M/2];
-		D3 = new int[N/2][M/2];
-		D4 = new int[N/2][M/2];
-		D_temp = new int[N/2][M/2];
+//		D1 = new int[N/2][M/2];
+//		D2 = new int[N/2][M/2];
+//		D3 = new int[N/2][M/2];
+//		D4 = new int[N/2][M/2];
+//		D_temp = new int[N/2][M/2];
 
 		for(int i=0; i<N; i++) {
 			st = new StringTokenizer(br.readLine());
@@ -72,7 +75,7 @@ public class Main_B_16935_배열돌리기3_노우영 {
 		for(int i=0; i<rows; i++) {
 			temp[rows-i-1] = arr[i];
 		}
-		arr = new int[rows][cols];
+//		arr = new int[rows][cols];
 		arr = temp;
 	}
 
@@ -86,7 +89,7 @@ public class Main_B_16935_배열돌리기3_노우영 {
 				temp[i][j] = arr[i][cols-1-j];
 			}
 		}
-		arr = new int[rows][cols];
+//		arr = new int[rows][cols];
 		arr = temp;
 	}
 
@@ -101,7 +104,7 @@ public class Main_B_16935_배열돌리기3_노우영 {
 			}
 		}
 
-		arr = new int[cols][rows];
+//		arr = new int[cols][rows];
 		arr = temp; 
 	}
 
@@ -115,14 +118,18 @@ public class Main_B_16935_배열돌리기3_노우영 {
 				temp[j][i] = arr[i][cols-1-j];
 			}
 		}
-		arr = new int[cols][rows];
+//		arr = new int[cols][rows];
 		arr = temp; 
 	}
-
+	//4분할 우회전
 	private static void R5() {
 		int rows = arr.length;
 		int cols = arr[0].length;
 		temp = new int[rows][cols];
+		D1 = new int[rows/2][cols/2];
+		D2 = new int[rows/2][cols/2];
+		D3 = new int[rows/2][cols/2];
+		D4 = new int[rows/2][cols/2];
 
 		//4분할배열 생성
 		for(int i=0; i<rows/2; i++) { 
@@ -142,14 +149,18 @@ public class Main_B_16935_배열돌리기3_노우영 {
 				temp[rows/2+i][j] = D3[i][j];
 			}
 		}
-		arr = new int[rows][cols];
+//		arr = new int[rows][cols];
 		arr = temp;
 	}
-
+	//4분할 좌회전
 	private static void R6() {
 		int rows = arr.length;
 		int cols = arr[0].length;
 		temp = new int[rows][cols];
+		D1 = new int[rows/2][cols/2];
+		D2 = new int[rows/2][cols/2];
+		D3 = new int[rows/2][cols/2];
+		D4 = new int[rows/2][cols/2];
 		
 		//4분할배열 생성
 		for(int i=0; i<rows/2; i++) { //6  N
@@ -169,7 +180,7 @@ public class Main_B_16935_배열돌리기3_노우영 {
 				temp[i][j]= D2[i][j]; //2->1
 			}
 		}
-		arr = new int[rows][cols];
+//		arr = new int[rows][cols];
 		arr = temp;
 	}
 
