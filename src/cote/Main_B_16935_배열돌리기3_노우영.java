@@ -125,8 +125,8 @@ public class Main_B_16935_배열돌리기3_노우영 {
 		temp = new int[rows][cols];
 
 		//4분할배열 생성
-		for(int i=0; i<rows/2; i++) { //6  N
-			for(int j=0; j<cols/2; j++) { //8  M
+		for(int i=0; i<rows/2; i++) { 
+			for(int j=0; j<cols/2; j++) { 
 				D1[i][j] = arr[i][j]; //왼 위
 				D2[i][j] = arr[i][cols/2+j]; //오른 위
 				D3[i][j] = arr[i+rows/2][j+cols/2]; //오른 아래
@@ -134,8 +134,8 @@ public class Main_B_16935_배열돌리기3_노우영 {
 			}
 		}
 		//4분할배열 temp에 저장
-		for(int i=0; i<rows/2; i++) { //6  N
-			for(int j=0; j<cols/2; j++) { //8  M
+		for(int i=0; i<rows/2; i++) { 
+			for(int j=0; j<cols/2; j++) { 
 				temp[i][j] = D4[i][j]; //4->1
 				temp[i][j+cols/2] = D1[i][j]; //1->2
 				temp[rows/2+i][cols/2+j] = D2[i][j]; //2->3
