@@ -66,7 +66,7 @@ public class 암호만들기 {
 				else son++;
 			}
 			if(mom>=1 && son>=2) 
-				System.out.println(sb);
+				System.out.println(result);
 			return;
 		}
 		
